@@ -1,0 +1,762 @@
+body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ec9ac6;
+      color: #333;
+    }
+
+    /* Header Cover */
+    .profile-header {
+      background: url('https://picsum.photos/1200/400?blur') center/cover no-repeat;
+      height: 250px;
+      position: relative;
+    }
+
+    .profile-header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Profile Card */
+    .profile-card {
+      max-width: 900px;
+      margin: -100px auto 40px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      padding: 30px;
+      position: relative;
+      z-index: 99;
+      
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #ee72b4;
+      object-fit: cover;
+      margin-top: -110px;
+    }
+
+    .profile-name {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 10px 0 5px;
+    }
+
+    .profile-bio {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .profile-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 20px 0;
+    }
+
+    .profile-info div {
+      text-align: center;
+    }
+
+    .profile-info h4 {
+      margin: 0;
+      color: #333;
+      font-size: 1.3rem;
+    }
+
+    .profile-info p {
+      margin: 0;
+      color: #777;
+      font-size: 0.85rem;
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: #cd3eb7;
+      font-size: 1.6rem;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #667eea;
+    }
+
+    /* Sections */
+    .section {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #764ba2;
+      font-size: 1.3rem;
+    }
+
+    .about p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Photo Album */
+    .photo-album {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .photo-album h2 {
+      margin-top: 0;
+      color: #764ba2;
+      font-size: 1.3rem;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .album-photo {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .album-photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+      }
+
+      .album-photo {
+        height: 120px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+      }
+
+      .album-photo {
+        height: 100px;
+      }
+    }
+
+    /* Special Skills Section */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #f0ebfa;
+      color: #764ba2;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(118, 75, 162, 0.2);
+    }
+
+    .skill ion-icon {
+      font-size: 1.1rem;
+    }
+
+    /* Contact Section */
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #555;
+      font-size: 1rem;
+      padding: 10px 15px;
+      background: #f8f7ff;
+      border-radius: 10px;
+    }
+
+    .contact-item ion-icon {
+      font-size: 1.4rem;
+      color: #764ba2;
+    }
+
+    .contact-social {
+      margin-top: 20px;
+    }
+
+    /* Responsive for Skills and Contact */
+    @media (max-width: 768px) {
+      .skill {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+      }
+
+      .contact-info {
+        gap: 15px;
+      }
+
+      .contact-item {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+
+      .song-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+
+      .play-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .skills {
+        gap: 8px;
+      }
+
+      .skill {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+
+      .skill ion-icon {
+        font-size: 0.95rem;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contact-item {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+
+      .song-cover {
+        width: 70px;
+        height: 70px;
+      }
+
+      .song-icon {
+        font-size: 2.2rem;
+      }
+
+      .song-title {
+        font-size: 1.15rem;
+      }
+
+      .song-artist {
+        font-size: 0.95rem;
+      }
+
+      .song-album {
+        font-size: 0.8rem;
+      }
+
+      .play-btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        width: 90%;
+        max-width: 250px;
+      }
+
+      .play-btn ion-icon {
+        font-size: 1rem;
+      }
+    }
+
+    /* Favorite Song Section */
+    .song-section {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .song-section h2 {
+      margin-top: 0;
+      color: #764ba2;
+      font-size: 1.3rem;
+    }
+
+    .song-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: linear-gradient(135deg, #f8f7ff 0%, #ede5f7 100%);
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .song-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(118, 75, 162, 0.15);
+    }
+
+    .song-cover {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .song-icon {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    .song-info {
+      flex: 1;
+    }
+
+    .song-title {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .song-artist {
+      margin: 5px 0 0;
+      font-size: 1rem;
+      color: #764ba2;
+      font-weight: 500;
+    }
+
+    .song-album {
+      margin: 3px 0 0;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .play-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+    }
+
+    .play-btn ion-icon {
+      font-size: 1.1rem;
+    }
+
+    .play-btn.playing {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+      }
+      50% {
+        box-shadow: 0 4px 25px rgba(118, 75, 162, 0.7);
+      }
+    }
+
+    /* Favorite Singer Section */
+    .singer-section {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .singer-section h2 {
+      margin-top: 0;
+      color: #764ba2;
+      font-size: 1.3rem;
+    }
+
+    .singer-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: linear-gradient(135deg, #f8f7ff 0%, #ede5f7 100%);
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 15px;
+    }
+
+    .singer-profile {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .singer-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #764ba2;
+    }
+
+    .singer-badge {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      background: #1DA1F2;
+      color: #fff;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    .singer-info {
+      flex: 1;
+    }
+
+    .singer-name {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .singer-genre {
+      margin: 3px 0 0;
+      font-size: 0.9rem;
+      color: #764ba2;
+      font-weight: 500;
+    }
+
+    .singer-nationality {
+      margin: 2px 0 0;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .singer-stats {
+      display: flex;
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .singer-stats .stat {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .singer-stats .stat ion-icon {
+      color: #e74c3c;
+      font-size: 1rem;
+    }
+
+    .singer-stats .stat:nth-child(2) ion-icon {
+      color: #3498db;
+    }
+
+    .singer-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .follow-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #1DA1F2 0%, #0d8bd9 100%);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .follow-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(29, 161, 242, 0.4);
+    }
+
+    .follow-btn.following {
+      background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    }
+
+    .singer-actions .play-btn {
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+
+    /* Top Songs List */
+    .top-songs {
+      margin-top: 20px;
+    }
+
+    .top-songs h4 {
+      margin: 0 0 12px;
+      color: #764ba2;
+      font-size: 1rem;
+    }
+
+    .song-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .song-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f8f7ff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+      cursor: pointer;
+    }
+
+    .song-item:hover {
+      background: #ede5f7;
+    }
+
+    .song-number {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #764ba2;
+      min-width: 25px;
+      text-align: center;
+    }
+
+    .song-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .song-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .song-labels {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .song-label {
+      font-size: 0.65rem;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .song-label.explicit {
+      background: #333;
+      color: #fff;
+      border: 1px solid #333;
+    }
+
+    .song-label.album {
+      background: #f0ebfa;
+      color: #764ba2;
+      border: 1px solid #e0daf0;
+    }
+
+    .song-plays {
+      font-size: 0.75rem;
+      color: #888;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .song-plays ion-icon {
+      font-size: 0.7rem;
+    }
+
+    .song-play-icon {
+      font-size: 1.5rem;
+      color: #764ba2;
+      transition: color 0.2s ease, transform 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .song-item:hover .song-play-icon {
+      color: #667eea;
+      transform: scale(1.2);
+    }
+
+    .song-item.active-song .song-play-icon {
+      color: #e74c3c;
+    }
+
+    .song-item.active-song .song-play-icon[name="pause"] {
+      animation: pulse-icon 1s infinite;
+    }
+
+    @keyframes pulse-icon {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.15);
+      }
+    }
+
+    /* Responsive for Singer Section */
+    @media (max-width: 768px) {
+      .singer-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .singer-actions {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .singer-stats {
+        justify-content: center;
+      }
+
+      .follow-btn,
+      .singer-actions .play-btn {
+        flex: 1;
+        justify-content: center;
+        max-width: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .singer-img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .singer-name {
+        font-size: 1.2rem;
+      }
+
+      .singer-stats {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .singer-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .follow-btn,
+      .singer-actions .play-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .song-item {
+        padding: 8px 12px;
+      }
+
+      .song-name {
+        font-size: 0.85rem;
+      }
+
+      .song-plays {
+        font-size: 0.75rem;
+      }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: #666;
+    }
