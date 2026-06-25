@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title> User Profile Page Design Example </title>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="./css/style.css">
+
+      <!-- Ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   </head>
+   <body>
+
+<!-- Start DEMO HTML (Use the following code into your project)-->
+         <!-- Header Cover -->
+  <div class="profile-header"></div>
+
+  <!-- Profile Card -->
+  <div class="profile-card" align="center">
+    <img src="angela3.jpg" alt="Profile Picture" class="profile-img">
+    <h2 class="profile-name">Angela Caserez</h2>
+    <p class="profile-bio">communication • back office • dress designer</p>
+
+    <div class="profile-info">
+      <div>
+        <h4>25</h4>
+        <p>Posts</p>
+      </div>
+      <div>
+        <h4>92</h4>
+        <p>Followers</p>
+      </div>
+      <div>
+        <h4>87</h4>
+        <p>Following</p>
+      </div>
+    </div>
+
+    <!-- Social -->
+    <div class="social-links">
+      <a href="https://www.instagram.com/angxlnv/"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="https://www.facebook.com/angxlnv"><ion-icon name="logo-facebook"></ion-icon></a>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="section about">
+    <h2>About Me</h2>
+    <p>
+      Hi! My name is Angela Caserez, and I am a student who is passionate about learning new things and improving my skills every day. I enjoy exploring technology, creating projects, and discovering creative ideas that help me grow both personally and academically.
+
+I am a hardworking and responsible person who believes that dedication and perseverance are important in achieving goals. During my free time, I enjoy listening to music, watching videos, spending time with friends and family, and learning about topics that interest me.
+    </p>
+  </div>
+
+  <!-- Photo Album Section -->
+  <div class="section photo-album">
+    <h2>Photo Album</h2>
+    <div class="photo-grid">
+      <img src="angela1.jpg" alt="Photo 1" class="album-photo">
+      <img src="angela2.jpg" alt="Photo 2" class="album-photo">
+      <img src="angela.jpg" alt="Photo 3" class="album-photo">
+      <img src="angela1.jpg" alt="Photo 4" class="album-photo">
+      <img src="angela1.jpg" alt="Photo 5" class="album-photo">
+      <img src="angela1.jpg" alt="Photo 6" class="album-photo">
+    </div>
+  </div>
+
+  <!-- Special Skills Section -->
+  <div class="section skills-section">
+    <h2>Special Skills</h2>
+    <div class="skills">
+      <span class="skill"><ion-icon name="chatbubble-outline"></ion-icon> Communication</span>
+      <span class="skill"><ion-icon name="briefcase-outline"></ion-icon> Back Office</span>
+      <span class="skill"><ion-icon name="shirt-outline"></ion-icon> Dress Designer</span>
+      <span class="skill"><ion-icon name="lightbulb-outline"></ion-icon> Creativity</span>
+      <span class="skill"><ion-icon name="people-outline"></ion-icon> Teamwork</span>
+      <span class="skill"><ion-icon name="construct-outline"></ion-icon> Problem Solving</span>
+      <span class="skill"><ion-icon name="time-outline"></ion-icon> Time Management</span>
+      <span class="skill"><ion-icon name="star-outline"></ion-icon> Leadership</span>
+    </div>
+  </div>
+
+  <!-- Favorite Singer Section -->
+  <div class="section singer-section">
+    <h2>My Favorite Singer</h2>
+    <div class="singer-card">
+      <div class="singer-profile">
+        <img src="lauv.jpg" alt="Lauv" class="singer-img">
+        <div class="singer-badge">
+          <ion-icon name="verified"></ion-icon>
+        </div>
+      </div>
+      <div class="singer-info">
+        <h3 class="singer-name">Lauv</h3>
+        <p class="singer-genre">Pop • Indie • Electronic</p>
+        <p class="singer-nationality">American Singer-Songwriter</p>
+        <div class="singer-stats">
+          <div class="stat">
+            <ion-icon name="heart"></ion-icon>
+            <span>12M+ Monthly</span>
+          </div>
+          <div class="stat">
+            <ion-icon name="people"></ion-icon>
+            <span>8M+ Followers</span>
+          </div>
+        </div>
+      </div>
+      <div class="singer-actions">
+        <button class="follow-btn" onclick="toggleFollow()">
+          <ion-icon name="person-add"></ion-icon>
+          Follow
+        </button>
+        <button class="play-btn" onclick="playSong()">
+          <ion-icon name="play"></ion-icon>
+          Play
+        </button>
+      </div>
+    </div>
+    <div class="top-songs">
+      <h4>Popular Songs</h4>
+      <div class="song-list">
+        <div class="song-item">
+          <span class="song-number">1</span>
+          <div class="song-details">
+            <span class="song-name">I Like Me Better</span>
+            <div class="song-labels">
+              <span class="song-label explicit">E</span>
+              <span class="song-label album">Single</span>
+            </div>
+            <span class="song-plays"><ion-icon name="play"></ion-icon> 250M+ plays</span>
+          </div>
+          <ion-icon name="play-circle" class="song-play-icon"></ion-icon>
+        </div>
+        <div class="song-item">
+          <span class="song-number">2</span>
+          <div class="song-details">
+            <span class="song-name">Tattoos Together</span>
+            <div class="song-labels">
+              <span class="song-label explicit">E</span>
+              <span class="song-label album">How I'm Feeling</span>
+            </div>
+            <span class="song-plays"><ion-icon name="play"></ion-icon> 180M+ plays</span>
+          </div>
+          <ion-icon name="play-circle" class="song-play-icon"></ion-icon>
+        </div>
+        <div class="song-item">
+          <span class="song-number">3</span>
+          <div class="song-details">
+            <span class="song-name">Mean It</span>
+            <div class="song-labels">
+              <span class="song-label explicit">E</span>
+              <span class="song-label album">~how i'm feeling~</span>
+            </div>
+            <span class="song-plays"><ion-icon name="play"></ion-icon> 150M+ plays</span>
+          </div>
+          <ion-icon name="play-circle" class="song-play-icon"></ion-icon>
+        </div>
+        <div class="song-item">
+          <span class="song-number">4</span>
+          <div class="song-details">
+            <span class="song-name">Modern Loneliness</span>
+            <div class="song-labels">
+              <span class="song-label album">~how i'm feeling~</span>
+            </div>
+            <span class="song-plays"><ion-icon name="play"></ion-icon> 120M+ plays</span>
+          </div>
+          <ion-icon name="play-circle" class="song-play-icon"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Me Section -->
+  <div class="section contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <div class="contact-item">
+        <ion-icon name="mail-outline"></ion-icon>
+        <span>angela@example.com</span>
+      </div>
+      <div class="contact-item">
+        <ion-icon name="phone-portrait-outline"></ion-icon>
+        <span>+123 456 7890</span>
+      </div>
+      <div class="contact-item">
+        <ion-icon name="location-outline"></ion-icon>
+        <span>Quezon City, Philippines</span>
+      </div>
+    </div>
+    <div class="social-links contact-social">
+      <a href="#"><ion-icon name="globe-outline"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Angela Caserez — All Rights Reserved
+  </footer>
+<!-- END EDMO HTML (Happy Coding!)-->
+ 
+      
+      <!-- Script JS -->
+      <script src="./js/script.js"></script>
+
+   </body>
+</html>
